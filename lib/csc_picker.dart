@@ -545,8 +545,7 @@ class CSCPicker extends StatefulWidget {
     this.countryDropdownLabel = "Country",
     this.stateDropdownLabel = "State",
     this.cityDropdownLabel = "City",
-
-    this.countryFilter, this.selectedItemPadding,
+    this.selectedItemPadding,
     this.countryFilter,
   }) : super(key: key);
 
