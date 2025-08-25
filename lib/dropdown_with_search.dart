@@ -66,7 +66,8 @@ class DropdownWithSearch<T> extends StatelessWidget {
           });
         },
         child: Container(
-          padding: selectedItemPadding ?? EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          padding: selectedItemPadding ??
+              EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           decoration: !disabled
               ? decoration != null
                   ? decoration
@@ -308,17 +309,17 @@ class CustomDialog extends StatelessWidget {
   final BoxConstraints constraints;
 
   Color _getColor(BuildContext context) {
+    // ignore: deprecated_member_use
     return Theme.of(context).dialogBackgroundColor;
   }
 
-  // TODO(johnsonmh): Update default dialog border radius to 4.0 to match material spec.
   static const RoundedRectangleBorder _defaultDialogShape =
       RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(2.0)));
 
   @override
   Widget build(BuildContext context) {
-    final DialogTheme dialogTheme = DialogTheme.of(context);
+    final DialogThemeData dialogTheme = DialogTheme.of(context);
     return AnimatedPadding(
       padding: MediaQuery.of(context).viewInsets +
           const EdgeInsets.symmetric(horizontal: 22.0, vertical: 24.0),
